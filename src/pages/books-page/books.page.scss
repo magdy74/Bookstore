@@ -1,0 +1,22 @@
+@import '../../sass_common_style/common_style.scss';
+
+.books-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .container{
+        @extend %container-width;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .filter-books-container{
+            display: flex;
+            flex-direction: row;
+            width: 100%;    
+        }
+        .pagination{
+            margin: 25px;
+        }
+    }
+}

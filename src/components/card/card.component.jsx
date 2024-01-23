@@ -5,12 +5,13 @@ import FavoriteLogo from "../header/menu-personal-logo/favorite/favorite";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 
-const Card = ({image, title, author, rating, price}) => {
+const Card = ({image, title, author, rating, price, booksCard}) => {
     return(
-        <div className="card">
+        <div className={`card ${booksCard? 'books-card': null}`}>
             <div className="book-image">
                 <img src={image} alt="book" />
             </div>
+            <div className={`card-details-functions ${booksCard? 'books-card-details-functions': null}`}>
             <ul className="book-details">
                 <ul>
                 <li className="title">{title}</li>
@@ -29,6 +30,7 @@ const Card = ({image, title, author, rating, price}) => {
                     <AddShoppingCartIcon fontSize="large"/>
                 </li>
             </ul>
+            </div>
         </div>
     )
 }
