@@ -1,0 +1,6 @@
+@import '../../sass_common_style/common_style.scss';
+.signin{
+    .container{
+        @extend %container-width;
+    }
+}

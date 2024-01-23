@@ -1,0 +1,42 @@
+@import '../../sass_common_style/common_style.scss';
+
+.shop-by-language{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    @include media-query(max-width, 768px, (height:550px));
+    background: linear-gradient(90deg, rgba(252,235,234,1) 0%, rgba(233,201,216,1) 100%);
+    .container{
+        @extend %container-width;
+        .title{
+            margin: 10px;
+            h2{
+                text-transform: capitalize;
+                font-size: 32px;
+            }
+        }
+        .card-container{
+            display: flex;
+            justify-content: space-evenly;
+            @include media-query(max-width, 768px, (flex-direction:column, align-items:center, gap:25px));
+            .language-card{
+                width: 300px;
+                height: 300px;
+                @include media-query(max-width, 768px, (width:200px, height:200px ));
+                border-radius: 50%;
+                background-color: white;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: #ececec;
+                }
+            }
+
+        }
+    }
+}

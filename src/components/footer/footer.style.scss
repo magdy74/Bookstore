@@ -1,0 +1,65 @@
+@import '../../sass_common_style/common_style.scss';
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #ffffff;
+    @include media-query-minmax(min-width, 0px, max-width, 768px, (font-size: 14px));
+    @include media-query(min-width, 768px, (font-size: 16px));
+    @include media-query(min-width, 992px, (font-size: 16px));
+    .container{
+        @extend %container-width;
+        display: flex;
+        justify-content: space-between;
+        ul{
+            padding: 0;
+            list-style: none; 
+            margin-top: 30px;
+            padding: 0px 10px;
+            li{
+                text-transform: capitalize;
+                margin-bottom: 10px;
+                cursor: pointer;
+                .link{
+                    text-decoration: none;
+                    color: black;
+                }
+            &:hover{
+                opacity: 70%;
+            }
+            }
+        }
+        .title-and-logo{
+            margin-left: 5px;
+            .title{
+                font-size: 20px;
+                h2{
+                    margin-bottom: 10px;
+                }
+            }
+            .logo{
+                ul{
+                    display: flex;
+                    justify-content: center;
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .made-by{
+        width: 100%;
+        hr{
+            border: 1px solid rgb(180, 180, 180);
+        }
+        h4{
+            text-align: center;
+            text-transform: capitalize;
+        }
+    }
+}

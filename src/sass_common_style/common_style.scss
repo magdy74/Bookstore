@@ -1,0 +1,30 @@
+$transation: 0.5s;
+$base-color: #FB635D;
+$second-color:#FEEBE8;
+
+@mixin media-query($width,$width-value, $args){
+    @media (#{$width}: $width-value) {
+        &{
+            @each $property , $property-value in $args{
+                #{$property}:$property-value
+            }
+        }
+      }
+}
+
+@mixin media-query-minmax($width1,$width1-value, $width2,$width2-value, $args){
+    @media (#{$width1}: $width1-value) and (#{$width2}: $width2-value) {
+        &{
+            @each $property , $property-value in $args{
+                #{$property}:$property-value
+            }
+        }
+      }
+}
+
+%container-width{
+    @include media-query(max-width, 768px, (width: 380px));
+    @include media-query(min-width, 768px, (width: 750px));
+    @include media-query(min-width, 992px, (width: 970px));
+    @include media-query(min-width, 1200px, (width: 1170px));
+}

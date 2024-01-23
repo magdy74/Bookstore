@@ -1,0 +1,81 @@
+@import '../../sass_common_style/common_style.scss';
+
+.card{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 350px;
+    height: 200px;
+    border-radius: 25px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .book-image{
+        display: flex;
+        align-items: center;
+        margin-left: 25px;
+        img{
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+    }
+    ul{
+       list-style: none; 
+       padding: 0;
+
+    }
+    li{
+        text-transform: capitalize;
+        padding-bottom: 5px;
+    }
+    .book-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 25px 0 25px 15px;
+        width: 50%;
+        .title{
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .author{
+            color: #797979;
+        }
+        .rating{
+            padding-bottom: 10px;
+        }
+        .price{
+            padding-bottom: 5px;
+        }
+        
+    }
+    .book-functions{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .add-favorite-logo{
+            margin: 5px 10px 5px 10px;
+            padding: 0;
+            .favorite-logo{
+            svg{
+                width: 35px;
+                margin: 0;
+            }
+            &:hover path{
+                fill-rule:nonzero;
+                fill:$base-color;
+            }}
+        }
+        .add-cart-logo{
+            svg{
+                color:black;
+            }
+            &:hover svg{
+                color: $base-color;
+                cursor: pointer;
+            }
+        }
+    }
+}

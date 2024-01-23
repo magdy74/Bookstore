@@ -1,0 +1,75 @@
+@import '../../sass_common_style/common_style.scss';
+
+.header{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .container{
+        @extend %container-width;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+            .logo{
+                display: flex;
+                align-items: center;
+                margin: 5px;
+                img{
+                    @include media-query-minmax(min-width, 0px, max-width, 768px, (width: 65px, height: 65px, margin-left: 5px));
+                    @include media-query(min-width, 768px, (width: 80px, height: 80px));
+                }
+                .title{
+                    margin-left: 5px;
+                    text-transform: capitalize;
+                    h2{
+                        margin: 0;
+                        @include media-query-minmax(min-width, 0px, max-width, 768px, (font-size: 18px, margin-bottom: 3px));
+                        @include media-query(min-width, 768px, (font-size: 26px, margin-bottom: 3px));
+                    }
+                    span{
+                        color: rgba(0,0,0,0.48);
+                        @include media-query-minmax(min-width, 0px, max-width, 768px, (font-size: 12px));
+                        @include media-query(min-width, 768px, (font-size: 13px));
+                        @include media-query(min-width, 992px, (font-size: 16px));
+                    }
+                }
+            }
+            .menu{
+                display: flex; 
+                align-items: center;
+                @include media-query(max-width, 768px, (display:none));
+                @include media-query(min-width, 768px, (font-size: 16px));
+                @include media-query(min-width, 992px, (font-size: 20px));
+                @include media-query(min-width, 1200px, (font-size: 22px));
+                .link{
+                    text-decoration: none;
+                    color: black;
+                    text-transform: capitalize;
+                    margin: 0 20px;
+                    text-align: center;
+                    width: max-content;
+                }
+                a:hover{
+                    color: #FB635D;
+                }
+            }
+            
+            .menu-personal{
+                display: flex;
+                align-items: center;
+                @include media-query(max-width, 768px, (display:none));
+
+            }
+
+            .menu-bar{
+                @include media-query(min-width, 768px, (display:none));
+                .MuiSvgIcon-root{
+                    height: 35px !important;
+                    width: 35px !important;
+                }
+            }
+        }
+}
