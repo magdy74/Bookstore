@@ -1,0 +1,14 @@
+@import '../../sass_common_style/common_style.scss';
+
+.book-page{
+    .container{
+        @extend %container-width;
+        background-color: white;
+        margin: 20px 0px;
+        border-radius: 25px;
+        padding: 25px;
+        .summary{
+            padding: 0px 25px 25px 25px;
+        }
+    }
+}

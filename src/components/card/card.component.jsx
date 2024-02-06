@@ -3,6 +3,7 @@ import "./card.style.scss";
 import { Rating } from "@mui/material";
 import FavoriteLogo from "../header/menu-personal-logo/favorite/favorite";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { Link } from "react-router-dom";
 
 
 const Card = ({image, title, author, rating, price, booksCard}) => {
@@ -14,7 +15,11 @@ const Card = ({image, title, author, rating, price, booksCard}) => {
             <div className={`card-details-functions ${booksCard? 'books-card-details-functions': null}`}>
             <ul className="book-details">
                 <ul>
-                <li className="title">{title}</li>
+                <li className="title">
+                    <Link to={`/books/${title}`}>
+                    {title}
+                    </Link>                                 
+                </li>
                 <li className="author">{author}</li>
                 </ul>
                 <li className="rating">

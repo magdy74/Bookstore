@@ -9,6 +9,8 @@ const Books = [
 		isbn:'',
 		isbn13:'',
 		pagesNumber:195,
+		language: 'english',
+		summary: `Rich Dad Poor Dad is Robert's story of growing up with two dads — his real father and the father of his best friend, his "rich dad" — and the ways in which both men shaped his thoughts about money and investing. The book explodes the myth that you need to earn a high income to be rich and explains the difference between working for money and having your money work for you.`
 
 	},
 	{
@@ -20,7 +22,8 @@ const Books = [
 		price:125,
 		isbn:'',
 		isbn13:'',
-		pagesNumber:288
+		pagesNumber:288,
+		language: 'english'
 	},
 	{
 		id:3,
@@ -31,7 +34,8 @@ const Books = [
 		price:160,
 		isbn: '0307887898',
 		isbn13:'9780307887894',
-		pagesNumber:299
+		pagesNumber:299,
+		language: 'english'
 	},
 	{
 		id:4,
@@ -42,7 +46,8 @@ const Books = [
 		price:200,
 		isbn:'0140280197',
 		isbn13:'9780140280197',
-		pagesNumber:452
+		pagesNumber:452,
+		language: 'english'
 	},
 	{
 		id:5,
@@ -53,7 +58,8 @@ const Books = [
 		price:120,
 		isbn:'006124189X',
 		isbn13:'9780061241895',
-		pagesNumber:320
+		pagesNumber:320,
+		language: 'english'
 	},
 	{
 		id:6,
@@ -64,7 +70,8 @@ const Books = [
 		price:120,
 		isbn:'',
 		isbn13:'',
-		pagesNumber:233
+		pagesNumber:233,
+		language: 'english'
 
 	},
 	{
@@ -76,7 +83,8 @@ const Books = [
 		price:160,
 		isbn:'0735211302',
 		isbn13:'',
-		pagesNumber:319
+		pagesNumber:319,
+		language: 'english'
 	},
 	{
 		id:8,
@@ -87,7 +95,8 @@ const Books = [
 		price:160,
 		isbn:'0374275637',
 		isbn13:'9780374275631',
-		pagesNumber:499
+		pagesNumber:499,
+		language: 'english'
 
 	},
 	{
@@ -99,7 +108,8 @@ const Books = [
 		price:200,
 		isbn:'',
 		isbn13:'',
-		pagesNumber:252
+		pagesNumber:252,
+		language: 'english'
 	}
 
 ]

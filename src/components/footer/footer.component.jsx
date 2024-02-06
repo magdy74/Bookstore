@@ -13,15 +13,15 @@ const Footer = () => (
                 </div>
                 <div className="logo">
                     <ul>
-                        <li><FacebookIcon color="primary" sx={{ fontSize: 50}}/></li>
-                        <li><WhatsAppIcon color="success" sx={{ fontSize: 40 }}/></li>
+                        <li><FacebookIcon color="primary" /></li>
+                        <li><WhatsAppIcon color="success" /></li>
                     </ul>
                 </div>
             </div>
             <div className="my-account">
                 <ul>
                     <li><Link to={'/'} className="link">home</Link></li>
-                    <li><Link to={'/'} className="link">your account</Link></li>
+                    <li><Link to={'/signup'} className="link">your account</Link></li>
                     <li><Link to={'/'} className="link">your orders</Link></li>
                     <li><Link to={'/'} className="link">favorite list</Link></li>
                 </ul>

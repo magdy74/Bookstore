@@ -6,6 +6,7 @@ import FilterContainer from "../../components/filter-container/filter-container"
 import Books from "../../data/data";
 
 const BooksPage = () => {
+    const itemNumbers= 6;
     const [page, setPage] = React.useState(1);
     const handleChange = (e,value) => {
         setPage(value);
@@ -15,9 +16,9 @@ const BooksPage = () => {
         <div className="container">
             <div className="filter-books-container">
                 <FilterContainer/>
-                <BooksCardContainer pagenumber={page}/>
+                <BooksCardContainer pagenumber={page} itemnumbers={itemNumbers}/>
             </div>
-            <Pagination className='pagination' count={Math.ceil(Books.length/6)} page={page} onChange={handleChange}/>
+            <Pagination className='pagination' count={Math.ceil(Books.length/itemNumbers)} page={page} onChange={handleChange}/>
         </div>
     </div>
 )};

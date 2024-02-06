@@ -16,7 +16,7 @@ const HeaderDropDown = () => (
                 <FavoriteLogo/>
             </Link>
             <Link className="link" to={'/'}>home</Link>
-            <Link className="link" to={"/"}>books</Link>
+            <Link className="link" to={"/books"}>books</Link>
             <Link className="link" to={"/"}>contact us</Link>
             <Link className="link" to={"/"}>faq</Link>
         </div>
