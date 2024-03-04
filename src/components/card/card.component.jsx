@@ -4,9 +4,11 @@ import { Rating } from "@mui/material";
 import FavoriteLogo from "../header/menu-personal-logo/favorite/favorite";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import {addItemToCart} from '../../redux/cart-reducer/cart-reducer';
 
-
-const Card = ({image, title, author, rating, price, booksCard}) => {
+const Card = (item) => {
+    const {image, title, author, rating, price, booksCard, addCartItem} = item;
     return(
         <div className={`card ${booksCard? 'books-card': null}`}>
             <div className="book-image">
@@ -32,7 +34,7 @@ const Card = ({image, title, author, rating, price, booksCard}) => {
                     <FavoriteLogo/>
                 </li>
                 <li className="add-cart-logo">
-                    <AddShoppingCartIcon fontSize="large"/>
+                    <AddShoppingCartIcon fontSize="large" onClick={()=> {addCartItem(item)}}/>
                 </li>
             </ul>
             </div>
@@ -40,4 +42,8 @@ const Card = ({image, title, author, rating, price, booksCard}) => {
     )
 }
 
-export default Card;
+const mapDispatchToProps = dispatch => ({
+    addCartItem: (item) => dispatch(addItemToCart(item))
+})
+
+export default connect(null, mapDispatchToProps)(Card);

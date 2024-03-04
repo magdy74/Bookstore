@@ -1,0 +1,100 @@
+@import '../../sass_common_style/common_style.scss';
+
+.shopping-cart-page{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 600px;
+    .container{
+        @extend %container-width;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .title{
+            h1{
+                font-weight: normal;
+            }
+        }
+        .item{
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid black;
+            padding: 20px 0;
+            width: 500px;
+            .image{
+                img{
+                    width: 100px;
+                }
+            }
+            .details{
+                margin: 0 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height:max-content;
+                width: 350px;
+                h2{
+                    margin: 0 5px;
+                    font-weight: normal;
+                }
+                .remove-and-save-in-favorite{
+                    display: flex;
+                    align-items: center;
+                    margin: 10px 0 0 0;
+                    .remove-item, .save-in-favorite{
+                        display: flex;
+                        align-items: center;
+                        color:$base-color;
+                        font-size: 16px;
+                        svg{
+                            color:$base-color;
+                            height: 20px;
+                            margin: 0;
+                        }
+                        &:hover{
+                            cursor: pointer;
+                            text-decoration: underline;
+                            opacity: 80%;
+                        }
+                    }
+                    .space{
+                        margin: 0px 5px;
+                        font-size: 16px;
+                        color: rgb(128, 118, 118);
+                    }
+                }
+                .quantity{
+                    display: flex;
+                    align-items: center;
+                    margin: 10px 5px;
+                    span{
+                        margin: 0 5px;
+                        font-size: 20px;
+                    }
+                    svg{
+                        color:$base-color;
+                        
+                    }
+                    svg:hover{
+                        cursor: pointer;
+                        opacity: 80%;
+                    }
+                }
+            }
+            .price{
+                margin-left: 10px;
+                width: 150px;
+                h2{
+                    margin: 0;
+                }
+            }
+        }
+        .total{
+            padding: 20px 0;
+            border-top: 1px solid black;
+            width: 500px;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

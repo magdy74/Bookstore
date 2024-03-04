@@ -10,7 +10,7 @@ const CardContainerBestsellers = () => {
                 <h1 className="title-bestseller">bestsellers</h1>
                 <div className="card-container-bestseller">
                     {Books.map(({id, ...rest})=>
-                    <Card key={id} {...rest}/>)}
+                    <Card key={id} id={id} {...rest}/>)}
                 </div>
             </div>
         </div>

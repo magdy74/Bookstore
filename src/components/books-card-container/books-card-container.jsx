@@ -14,7 +14,7 @@ const BooksCardContainer = ({pagenumber, itemnumbers}) => {
     return(
         <div className="books-card-container">
                 {dividedBooks.map(({id, ...rest}) => (
-                    <Card key={id} {...rest} booksCard={true}/>
+                    <Card key={id} id={id} {...rest} booksCard={true}/>
                     ))}
         </div>
     )

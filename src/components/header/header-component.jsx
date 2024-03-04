@@ -27,8 +27,10 @@ const Header = () => {
                 <Link className="link" to={"/"}>faq</Link>
             </div>
             <div className="menu-personal">
-                <FavoriteLogo/>
-                <CartLogo/>
+                <FavoriteLogo/>  
+                <Link to={'/cart'}>
+                    <CartLogo/>
+                </Link>
                 <Link to={'/signup'}>
                     <PersonalLogo/>
                 </Link>

@@ -2,7 +2,10 @@ import React from "react";
 import './detailed-card.scss';
 import { Button, Rating } from "@mui/material";
 
-const DetailedCard = ({book}) => {
+import { addItemToCart } from "../../redux/cart-reducer/cart-reducer";
+import { connect } from "react-redux";
+
+const DetailedCard = ({book, addCartItem}) => {
     const {title, image, author, rating, price, pagesNumber, language} = book;
     return(
         <div className="detailed-card">
@@ -29,7 +32,7 @@ const DetailedCard = ({book}) => {
                 </div>
             </div>   
             <div className="buttons">
-                    <Button variant="contained" size="large">
+                    <Button variant="contained" size="large" onClick={()=>{addCartItem(book)}}>
                         add to cart
                     </Button>
                     <Button variant="contained" size="large">
@@ -43,4 +46,9 @@ const DetailedCard = ({book}) => {
     )
 }
 
-export default DetailedCard;
+
+const mapDispatchToProps = dispatch => ({
+    addCartItem: (item) => dispatch(addItemToCart(item))
+})
+
+export default connect(null, mapDispatchToProps)(DetailedCard);
