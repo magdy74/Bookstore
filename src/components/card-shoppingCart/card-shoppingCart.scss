@@ -1,0 +1,90 @@
+@import '../../sass_common_style/common_style.scss';
+
+.item-card-shopping-cart{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    padding: 20px 0;
+    width: 500px;
+    @include media-query(max-width, 768px, (width: 360px));
+    @include media-query-minmax(min-width, 768px, max-width, 992px, ( width: 480px));
+    @include media-query(min-width, 1200px, (width: 650px));
+    .image{
+        img{
+            width: 100px;
+            @include media-query(max-width, 768px, (width: 80px));
+        }
+    }
+    .details-and-price{
+        display: flex;
+        width: 400px;
+        @include media-query(max-width, 768px, (width: 300px, flex-direction:column));
+        @include media-query(min-width, 1200px, (width: 550px));
+        .details{
+            margin-left: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height:max-content;
+            width: 350px;
+            @include media-query(max-width, 768px, (width: 260px));
+            @include media-query-minmax(min-width, 768px, max-width, 992px, ( width: 330px));
+            @include media-query(min-width, 1200px, (width: 400px));
+            h2{
+                margin: 0 5px;
+                font-weight: normal;
+            }
+            .remove-and-save-in-favorite{
+                display: flex;
+                align-items: center;
+                margin: 10px 0 0 0;
+                .remove-item, .save-in-favorite{
+                    display: flex;
+                    align-items: center;
+                    color:$base-color;
+                    font-size: 16px;
+                    svg{
+                        color:$base-color;
+                        height: 20px;
+                        margin: 0;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                        text-decoration: underline;
+                        opacity: 80%;
+                    }
+                }
+                .space{
+                    margin: 0px 5px;
+                    font-size: 16px;
+                    color: rgb(128, 118, 118);
+                }
+            }
+            .quantity{
+                display: flex;
+                align-items: center;
+                margin: 10px 5px 10px 3px;
+                span{
+                    margin: 0 5px;
+                    font-size: 20px;
+                }
+                svg{
+                    color:$base-color;
+                    
+                }
+                svg:hover{
+                    cursor: pointer;
+                    opacity: 80%;
+                }
+            }
+        }
+        .price{
+            margin-left: 10px;
+            width: 150px;
+            @include media-query(max-width, 768px, (margin:0 28px));
+            h2{
+                margin: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@import '../../sass_common_style/common_style.scss';
+
+.cart-summary-container{
+    .cart-summary-title{
+        border-bottom: 1px solid black;
+        margin: 20px 0;
+        h1{
+            font-weight: normal;
+            text-transform: capitalize;
+            margin: 0;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+    }
+    .cart-summary-details{
+        display: flex;
+        flex-direction: column;
+        .line-item{
+            display: flex;
+            justify-content: space-between;
+            span{
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .total{
+        display: flex;
+        border-top: 1px solid black;
+        margin: 15px 0;
+        padding-top: 20px;
+        .line-item{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            span{
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+    }
+    }
+
+    .go-to-checkout-button{
+        display: flex;
+        justify-content: center;
+
+        button{
+            background-color: $base-color;
+            width: 250px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            text-transform: capitalize;
+            border-radius: 20px;
+        }
+    }
+}

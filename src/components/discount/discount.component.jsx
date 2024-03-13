@@ -3,7 +3,7 @@ import './discount.scss';
 import img from './Unsplash.svg';
 
 const Discount = () => (
-    <div className="discount">
+    <div className="discount-container">
         <div className="container">
             <div className="discount-text">
                 <h2>All books are 20% off now!</h2>

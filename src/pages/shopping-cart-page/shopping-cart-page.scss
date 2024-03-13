@@ -8,93 +8,49 @@
     .container{
         @extend %container-width;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        .title{
-            h1{
-                font-weight: normal;
-            }
-        }
-        .item{
+        justify-content: space-between;
+        @include media-query(max-width, 768px, (flex-direction: column));
+        .shopping-cart-container{
             display: flex;
-            justify-content: space-between;
-            border-top: 1px solid black;
-            padding: 20px 0;
+            flex-direction: column;
+            background-color: #ffffff;
             width: 500px;
-            .image{
-                img{
-                    width: 100px;
-                }
-            }
-            .details{
-                margin: 0 25px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                height:max-content;
-                width: 350px;
-                h2{
-                    margin: 0 5px;
+            height: fit-content;
+            padding: 0 25px;
+            margin: 20px 0;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            @include media-query(max-width, 768px, (width: 360px, padding: 0 10px));
+            @include media-query-minmax(min-width, 768px, max-width, 992px, (padding: 0 10px, width: 480px));
+            @include media-query(min-width, 1200px, (width: 650px));
+            .title{
+                h1{
                     font-weight: normal;
-                }
-                .remove-and-save-in-favorite{
-                    display: flex;
-                    align-items: center;
-                    margin: 10px 0 0 0;
-                    .remove-item, .save-in-favorite{
-                        display: flex;
-                        align-items: center;
-                        color:$base-color;
-                        font-size: 16px;
-                        svg{
-                            color:$base-color;
-                            height: 20px;
-                            margin: 0;
-                        }
-                        &:hover{
-                            cursor: pointer;
-                            text-decoration: underline;
-                            opacity: 80%;
-                        }
-                    }
-                    .space{
-                        margin: 0px 5px;
-                        font-size: 16px;
-                        color: rgb(128, 118, 118);
-                    }
-                }
-                .quantity{
-                    display: flex;
-                    align-items: center;
-                    margin: 10px 5px;
-                    span{
-                        margin: 0 5px;
-                        font-size: 20px;
-                    }
-                    svg{
-                        color:$base-color;
-                        
-                    }
-                    svg:hover{
-                        cursor: pointer;
-                        opacity: 80%;
-                    }
+                    text-transform: capitalize;
+                    margin: 20px 0;
                 }
             }
-            .price{
-                margin-left: 10px;
-                width: 150px;
-                h2{
-                    margin: 0;
-                }
+            .total{
+                padding: 20px 0;
+                border-top: 1px solid black;
+                width: 500px;
+                display: flex;
+                justify-content: flex-end;
+                @include media-query(max-width, 768px, (width: 380px));
             }
         }
-        .total{
-            padding: 20px 0;
-            border-top: 1px solid black;
-            width: 500px;
+        .cart-summary-container{
             display: flex;
-            justify-content: flex-end;
+            flex-direction: column;
+            background-color: #ffffff;
+            width: 330px;   
+            height: 330px;
+            padding: 0 25px;
+            margin: 20px;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            @include media-query(max-width, 768px, (margin-left:0));
+            @include media-query-minmax(min-width, 768px, max-width, 992px, (width:210px, padding: 0 10px, margin: 20px 0px 20px 10px));
         }
     }
 }

@@ -37,7 +37,6 @@ const removeCartItem = (cartList, item) => {
 	return cartList;
 }
 
-
 const INITIAL_STATE = {
 	bookList:[]
 };
