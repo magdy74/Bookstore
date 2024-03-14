@@ -3,6 +3,7 @@ import Footer from './components/footer/footer.component';
 import Header from './components/header/header-component';
 import BookPage from './pages/book-page/book-page';
 import BooksPage from './pages/books-page/books.page';
+import FaqPage from './pages/faq-page/faq-page';
 import HomePage from './pages/home-page/home.page';
 import ShoppingCartPage from './pages/shopping-cart-page/shopping-cart-page';
 import SignInPage from './pages/signin-page/signup.page';
@@ -23,6 +24,7 @@ function App() {
             <Route path=':id' element={<BookPage/>}/>
           </Route>
           <Route path='/cart' element={<ShoppingCartPage/>}/>
+          <Route path='/faq' element={<FaqPage/>}/>
         </Routes>
         <Footer/>
       </div>

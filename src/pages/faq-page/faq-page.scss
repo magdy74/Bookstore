@@ -1,0 +1,25 @@
+@import '../../sass_common_style/common_style.scss';
+
+.faq-page{
+    .container{
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: #ffffff;
+        margin: 20px 0;
+        height: fit-content;
+        @extend %container-width;
+        h2{
+            width: 100%;
+            padding: 0;
+            @include media-query(max-width, 768px, (font-size: 26px));
+        }
+        .accordion-heading{
+            h3{
+                @include media-query(max-width, 768px, (font-size: 18px));
+            }
+            &:hover{
+                background-color: #eee;
+            }
+        }
+    }
+}

@@ -8,30 +8,37 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import HeaderDropDown from "../header-dropdown/header-dropdown.component";
 import { Link } from "react-router-dom";
+
 const Header = () => {
     const [menuBar, SetMenuBar] = useState(false);
     return(
     <div className="header">
         <div className="container">
             <div className="logo">
-                <img src={logo} alt="logo" />
+                <Link className="link" to={'/'}>
+                    <img src={logo} alt="logo" />  
+                </Link>  
                 <div className="title">
-                    <h2>bookoe</h2>
+                    <Link className="link" to={'/'}>
+                        <h2>bookshelf</h2>
+                    </Link>    
                     <span>online book store</span>
                 </div>
             </div>
             <div className="menu">
                 <Link className="link" to={'/'}>home</Link>
                 <Link className="link" to={"/books"}>books</Link>
-                <Link className="link" to={"/"}>contact us</Link>
-                <Link className="link" to={"/"}>faq</Link>
+                <Link className="link" to={"/contactus"}>contact us</Link>
+                <Link className="link" to={"/faq"}>faq</Link>
             </div>
             <div className="menu-personal">
-                <FavoriteLogo/>  
-                <Link to={'/cart'}>
+                <Link className="menu-personal-favorite-logo" to={'/favorite'}>
+                    <FavoriteLogo/>  
+                </Link>
+                <Link className="menu-personal-cart" to={'/cart'}>
                     <CartLogo/>
                 </Link>
-                <Link to={'/signup'}>
+                <Link className="menu-personal-personal-logo" to={'/signup'}>
                     <PersonalLogo/>
                 </Link>
             </div>
@@ -48,7 +55,7 @@ const Header = () => {
                 </IconButton>
             </div>
         </div>
-        {menuBar ? <HeaderDropDown/> : null}
+        {menuBar ? <HeaderDropDown SetMenuBar={SetMenuBar}/> : null}
     </div>
     )
 }

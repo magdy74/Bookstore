@@ -30,6 +30,26 @@
                     margin: 20px 0;
                 }
             }
+            .shopping-cart-message{
+                h2{
+                    font-weight: normal; 
+                    margin: 20px 0;
+                    margin-bottom: 30px;
+                }
+                .start-shopping-button{
+                    display: flex;
+                    justify-content: center;
+            
+                    button{
+                        background-color: $base-color;
+                        width: 250px;
+                        margin-bottom: 40px;
+                        font-size: 18px;
+                        text-transform: capitalize;
+                        border-radius: 20px;
+                    }
+                }
+            }
             .total{
                 padding: 20px 0;
                 border-top: 1px solid black;

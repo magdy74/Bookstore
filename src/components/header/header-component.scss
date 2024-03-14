@@ -24,10 +24,14 @@
                 .title{
                     margin-left: 5px;
                     text-transform: capitalize;
-                    h2{
-                        margin: 0;
-                        @include media-query-minmax(min-width, 0px, max-width, 768px, (font-size: 18px, margin-bottom: 3px));
-                        @include media-query(min-width, 768px, (font-size: 26px, margin-bottom: 3px));
+                    a{
+                        text-decoration: none;
+                        h2{
+                            margin: 0;
+                            color: black;
+                            @include media-query-minmax(min-width, 0px, max-width, 768px, (font-size: 18px, margin-bottom: 3px));
+                            @include media-query(min-width, 768px, (font-size: 26px, margin-bottom: 3px));
+                        }
                     }
                     span{
                         color: rgba(0,0,0,0.48);
@@ -60,7 +64,15 @@
             .menu-personal{
                 display: flex;
                 align-items: center;
-                @include media-query(max-width, 768px, (display:none));
+                @include media-query(max-width, 768px, (justify-content: flex-end,flex-grow: 1, margin-right:5px));
+                .menu-personal-personal-logo, .menu-personal-favorite-logo{
+                    @include media-query(max-width, 768px, (display:none));
+                }
+                .menu-personal-cart{
+                    svg{
+                        @include media-query(max-width, 768px, (width:30px));  
+                    }
+                }
 
             }
 
