@@ -30,10 +30,9 @@ const FaqPage = () => {
   return (
     <div className='faq-page'>
     <ThemeProvider theme={theme}>
+      <div className='container'>
     <Container
       id="faq"
-      className='container'
-      
       sx={{
         pt: { xs: 4, sm: 12 },
         pb: { xs: 8, sm: 16 },
@@ -167,6 +166,7 @@ const FaqPage = () => {
         </Accordion>
       </Box>
     </Container>
+    </div>
     </ThemeProvider>
     </div>
   );
