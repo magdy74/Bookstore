@@ -6,7 +6,7 @@
     border-top: 1px solid black;
     padding: 20px 0;
     width: 500px;
-    @include media-query(max-width, 768px, (width: 360px));
+    @include media-query(max-width, 768px, (width: 340px));
     @include media-query-minmax(min-width, 768px, max-width, 992px, ( width: 480px));
     @include media-query(min-width, 1200px, (width: 650px));
     .image{

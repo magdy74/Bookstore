@@ -9,7 +9,7 @@
         @extend %container-width;
         display: flex;
         justify-content: space-between;
-        @include media-query(max-width, 768px, (flex-direction: column));
+        @include media-query(max-width, 768px, (flex-direction: column, align-items:center));
         .shopping-cart-container{
             display: flex;
             flex-direction: column;
@@ -17,10 +17,10 @@
             width: 500px;
             height: fit-content;
             padding: 0 25px;
-            margin: 20px 0;
+            margin: 20px 10px;
             border-radius: 25px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            @include media-query(max-width, 768px, (width: 360px, padding: 0 10px));
+            @include media-query(max-width, 768px, (width: 340px, padding: 0 10px));
             @include media-query-minmax(min-width, 768px, max-width, 992px, (padding: 0 10px, width: 480px));
             @include media-query(min-width, 1200px, (width: 650px));
             .title{
@@ -33,7 +33,7 @@
             .shopping-cart-message{
                 h2{
                     font-weight: normal; 
-                    margin: 20px 0;
+                    margin: 20px 0px;
                     margin-bottom: 30px;
                 }
                 .start-shopping-button{
@@ -63,10 +63,10 @@
             display: flex;
             flex-direction: column;
             background-color: #ffffff;
-            width: 330px;   
+            width: 310px;   
             height: 330px;
             padding: 0 25px;
-            margin: 20px;
+            margin: 20px 10px;
             border-radius: 25px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             @include media-query(max-width, 768px, (margin-left:0));
