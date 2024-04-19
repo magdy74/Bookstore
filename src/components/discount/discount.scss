@@ -23,7 +23,7 @@
             @include media-query(max-width, 768px, (width: 380px));
             img{
                 height: 300px;
-                @include media-query(max-width, 768px, (height: 250px, margin-right:80px));
+                @include media-query(max-width, 768px, (height: 250px));
             }
         }
     }    

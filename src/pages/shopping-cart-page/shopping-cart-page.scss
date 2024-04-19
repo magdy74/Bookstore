@@ -8,7 +8,7 @@
     .container{
         @extend %container-width;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         @include media-query(max-width, 768px, (flex-direction: column, align-items:center));
         .shopping-cart-container{
             display: flex;

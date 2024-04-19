@@ -22,16 +22,16 @@ const Footer = () => (
                 <ul>
                     <li><Link to={'/'} className="link">home</Link></li>
                     <li><Link to={'/signup'} className="link">your account</Link></li>
-                    <li><Link to={'/'} className="link">your orders</Link></li>
-                    <li><Link to={'/'} className="link">favorite list</Link></li>
+                    {/* <li><Link to={'/'} className="link">your orders</Link></li> */}
+                    <li><Link to={'/favorite'} className="link">favorite list</Link></li>
                 </ul>
             </div>
             <div className="about-us">
                 <ul>
-                    <li><Link to={'/'} className="link">about us</Link></li>
-                    <li><Link to={'/'} className="link">contact us</Link></li>
-                    <li><Link to={'/'} className="link">faq</Link></li>
-                    <li><Link to={'/'} className="link">your orders</Link></li>    
+                    <li><Link to={'/books'} className="link">books</Link></li>
+                    <li><Link to={'/contactus'} className="link">contact us</Link></li>
+                    <li><Link to={'/faq'} className="link">faq</Link></li>
+                    {/* <li><Link to={'/'} className="link">about us</Link></li>    */}
                 </ul>      
             </div>
         </div>
