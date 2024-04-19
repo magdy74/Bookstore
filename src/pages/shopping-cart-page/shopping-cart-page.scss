@@ -69,7 +69,6 @@
             margin: 20px 10px;
             border-radius: 25px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            @include media-query(max-width, 768px, (margin-left:0));
             @include media-query-minmax(min-width, 768px, max-width, 992px, (width:210px, padding: 0 10px, margin: 20px 0px 20px 10px));
         }
     }
