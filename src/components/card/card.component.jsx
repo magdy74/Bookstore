@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./card.style.scss";
 import { Rating } from "@mui/material";
 import FavoriteLogo from "../header/menu-personal-logo/favorite/favorite";
@@ -9,6 +9,7 @@ import {addItemToCart} from '../../redux/cart-reducer/cart-reducer';
 
 const Card = (item) => {
     const {image, title, author, rating, price, booksCard, addCartItem} = item;
+    const [buttonStatus, setStatus] = useState(false);
     return(
         <div className={`card ${booksCard? 'books-card': null}`}>
             <div className="book-image">
@@ -33,8 +34,11 @@ const Card = (item) => {
                 <li className="add-favorite-logo">
                     <FavoriteLogo/>
                 </li>
-                <li className="add-cart-logo">
-                    <AddShoppingCartIcon fontSize="large" onClick={()=> {addCartItem(item)}}/>
+                <li className={`add-cart-logo ${buttonStatus ? "button-clicked" :'standard'}`}>
+                    <AddShoppingCartIcon fontSize="large" className={`button-add-shopping-cart ${buttonStatus ? "icon-button-clicked" :''}`} onClick={()=> {addCartItem(item); setStatus(true)}}/>
+                    <div className="set-timeout-number">
+                        {buttonStatus ? setTimeout(()=>setStatus(false), 2000) : ''}
+                    </div>
                 </li>
             </ul>
             </div>

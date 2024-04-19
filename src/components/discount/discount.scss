@@ -19,9 +19,12 @@
             @include media-query(min-width, 992px, (font-size: 32px));
             @include media-query(min-width, 1200px, (font-size: 36px));
         }
-        img{
-            height: 300px;
-            @include media-query(max-width, 768px, (height: 250px, margin-right:80px));
+        .discount-image{
+            @include media-query(max-width, 768px, (width: 380px));
+            img{
+                height: 300px;
+                @include media-query(max-width, 768px, (height: 250px, margin-right:80px));
+            }
         }
     }    
 }

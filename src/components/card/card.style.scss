@@ -9,6 +9,7 @@
     border-radius: 25px;
     margin: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
     .book-image{
         display: flex;
         align-items: center;
@@ -85,14 +86,34 @@
                     fill:$base-color;
                 }}
             }
-            .add-cart-logo{
-                svg{
-                    color:black;
-                }
-                &:hover svg{
-                    color: $base-color;
-                    cursor: pointer;
-                }
+        }
+        .add-cart-logo{
+            svg{
+                color:black;
+            }
+            &.standard:hover svg {
+                color: $base-color;
+                cursor: pointer;
+            }
+            &.button-clicked::after{
+                content: 'Added to shopping cart';
+                position: absolute;
+                left: 70px;
+                background-color: black;
+                padding: 15px;
+                border-radius: 15px;
+                color: white;
+                width: 180px;
+                height: 20px;
+                animation: showMessage 2s ease-in-out forwards;
+
+            }
+            .icon-button-clicked{
+                color: #797979;
+                cursor:auto;
+                      }
+            .set-timeout-number{
+                display:none;
             }
         }
     }
@@ -115,5 +136,26 @@
             display: flex;
             justify-content: center;
         }
+        .add-cart-logo{
+            &.button-clicked::after{
+                content: 'Added to shopping cart';
+                position: absolute;
+                left: 20px;
+                top: 50%;
+                @include media-query(max-width, 768px, (transform: scale(75%), left:-5px));
+            }
+        }
     }
 }
+
+@keyframes showMessage {
+    0% {
+      opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+  }
