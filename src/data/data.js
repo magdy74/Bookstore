@@ -23,7 +23,9 @@ const Books = [
 		isbn:'',
 		isbn13:'',
 		pagesNumber:288,
-		language: 'english'
+		language: 'english',
+		summary: `"How to Win Friends and Influence People" by Dale Carnegie is a timeless self-help classic that provides practical advice on improving interpersonal relationships. Carnegie outlines fundamental principles for winning people over, such as showing genuine interest in others, listening actively, and giving sincere appreciation. The book emphasizes the importance of empathy, understanding others' perspectives, and avoiding criticism and condemnation. Through anecdotes and examples, Carnegie illustrates how these principles can be applied in various situations to enhance communication, build trust, and ultimately achieve success in both personal and professional life.`
+
 	},
 	{
 		id:3,
@@ -35,7 +37,9 @@ const Books = [
 		isbn: '0307887898',
 		isbn13:'9780307887894',
 		pagesNumber:299,
-		language: 'english'
+		language: 'english',
+		summary: `"The Lean Startup" advocates for a systematic approach to starting and growing businesses by emphasizing rapid experimentation, customer feedback, and iterative product development to minimize waste and maximize success.`
+		
 	},
 	{
 		id:4,
@@ -47,7 +51,9 @@ const Books = [
 		isbn:'0140280197',
 		isbn13:'9780140280197',
 		pagesNumber:452,
-		language: 'english'
+		language: 'english',
+		summary: `"The 48 Laws of Power" is a guidebook to understanding and mastering the dynamics of power. Authored by Robert Greene, it offers 48 laws or principles derived from historical examples and philosophical insights. These laws cover a wide range of tactics, from mastering emotions to manipulating perceptions, and are intended to help readers navigate complex social and professional situations. The book's overarching message is one of strategic thinking and awareness in pursuit of personal and professional goals.`
+
 	},
 	{
 		id:5,
@@ -59,7 +65,8 @@ const Books = [
 		isbn:'006124189X',
 		isbn13:'9780061241895',
 		pagesNumber:320,
-		language: 'english'
+		language: 'english',
+		summary: `"Influence: The Psychology of Persuasion" by Robert Cialdini explores the psychology behind why people say "yes" and how to effectively influence others. Cialdini outlines six key principles of persuasion, including reciprocity, commitment and consistency, social proof, authority, liking, and scarcity. Through research and real-world examples, he demonstrates how these principles can be used ethically to persuade others and make better decisions.`
 	},
 	{
 		id:6,
@@ -71,7 +78,8 @@ const Books = [
 		isbn:'',
 		isbn13:'',
 		pagesNumber:233,
-		language: 'english'
+		language: 'english',
+		summary: `"Think and Grow Rich" by Napoleon Hill is a classic self-help book that outlines principles for achieving success. Hill emphasizes the power of mindset, positive thinking, and goal setting in creating wealth and achieving one's dreams. Drawing on interviews with successful individuals, he presents a framework for personal development and financial success, including strategies for overcoming obstacles and maintaining persistence. The book advocates for the importance of belief in oneself and the power of the subconscious mind in manifesting one's desires.`
 
 	},
 	{
@@ -84,7 +92,8 @@ const Books = [
 		isbn:'0735211302',
 		isbn13:'',
 		pagesNumber:319,
-		language: 'english'
+		language: 'english',
+		summary: `"Atomic Habits" by James Clear is a practical guide to building good habits and breaking bad ones. Clear emphasizes the power of small, incremental changes, or "atomic habits," in achieving significant improvements over time. He introduces a framework for habit formation based on four laws: make it obvious, make it attractive, make it easy, and make it satisfying. Through scientific research and real-life examples, Clear demonstrates how understanding and leveraging these laws can lead to lasting behavioral change and personal transformation.`
 	},
 	{
 		id:8,
@@ -96,7 +105,8 @@ const Books = [
 		isbn:'0374275637',
 		isbn13:'9780374275631',
 		pagesNumber:499,
-		language: 'english'
+		language: 'english',
+		summary: `"Thinking, Fast and Slow" by Daniel Kahneman explores the two systems of thought that drive human decision-making: the fast, intuitive "System 1" and the slower, more deliberate "System 2." Kahneman, a Nobel Prize-winning psychologist, delves into the cognitive biases and heuristics that influence our judgments and choices. He explains how these mental processes shape our perceptions, attitudes, and behaviors, and offers insights into how we can make better decisions by understanding and managing our cognitive biases. The book provides a fascinating look into the workings of the human mind and offers practical implications for improving decision-making in various aspects of life.`
 
 	},
 	{
@@ -109,7 +119,8 @@ const Books = [
 		isbn:'',
 		isbn13:'',
 		pagesNumber:252,
-		language: 'english'
+		language: 'english',
+		summary: `"The Psychology of Money" by Morgan Housel delves into the behavioral aspects of personal finance and investing. Housel explores the psychological factors that influence how people manage money, including emotions, biases, and societal norms. Through engaging anecdotes and insights, he highlights the importance of understanding one's relationship with money and making decisions that align with long-term financial goals. The book offers valuable lessons on topics such as risk-taking, patience, and the true meaning of wealth, providing readers with a deeper understanding of how to navigate the complex world of finance and achieve financial success.`
 	}
 
 ]

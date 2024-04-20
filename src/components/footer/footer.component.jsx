@@ -9,12 +9,20 @@ const Footer = () => (
         <div className="container">
             <div className="title-and-logo">
                 <div className="title">
-                    <h2>Bookoe</h2>
+                    <h2>Bookshelf</h2>
                 </div>
                 <div className="logo">
                     <ul>
-                        <li><FacebookIcon color="primary" /></li>
-                        <li><WhatsAppIcon color="success" /></li>
+                        <li>
+                            <a href="https://www.facebook.com/profile.php?id=100088864683295">
+                                <FacebookIcon color="primary"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/201010339250">
+                                <WhatsAppIcon color="success" />
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

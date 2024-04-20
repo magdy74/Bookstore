@@ -3,12 +3,14 @@
 .book-page{
     .container{
         @extend %container-width;
+        box-sizing: border-box;
         background-color: white;
         margin: 20px 0px;
         border-radius: 25px;
         padding: 25px;
         .summary{
-            padding: 0px 25px 25px 25px;
+            padding: 0px 20px 25px 20px;
+            line-height: 1.7;
         }
     }
 }

@@ -3,6 +3,7 @@
 .detailed-card{
     display: flex;
     justify-content: space-evenly;
+    position: relative;
     @include media-query(max-width, 768px, (flex-direction: column, align-items: center));
     .image{
         margin-right: 25px;
@@ -58,13 +59,34 @@
         flex-direction: column;
         margin: 10px;
         justify-content: center;
-        button{
+        .add-to-cart, .add-to-favorite{
             background-color: $base-color;
             width: 180px;
             margin-bottom: 20px;
             font-size: 16px;
             text-transform: capitalize;
             border-radius: 20px;
+
         }
+        .button-clicked-style{
+            background-color: #797979;
+            cursor: auto;
+        }
+        .button-clicked:first-child{
+            &::after{
+                content: 'Added to cart';
+                @extend %message-properties;
+            }
+        }
+        .add-to-favorite.button-clicked-style{
+            background-color: #797979;
+            cursor: auto;
+        }
+        .button-clicked:nth-child(2){
+            &::after{
+            content: 'Added to favorite';
+            @extend %message-properties;
+        }
+    }
     }
 }

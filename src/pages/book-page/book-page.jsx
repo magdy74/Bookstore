@@ -14,7 +14,7 @@ const BookPage = () =>{
             <div className="summary">
                 <h2>Summary</h2>
                 {Books.map((book) => book.title === id ? 
-                book.summary : null)}
+                <span>{book.summary}</span> : null)}
             </div>
             </div>
         </div>

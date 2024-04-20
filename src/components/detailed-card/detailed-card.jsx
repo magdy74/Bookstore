@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import './detailed-card.scss';
 import { Button, Rating } from "@mui/material";
 
 import { addItemToCart } from "../../redux/cart-reducer/cart-reducer";
 import { connect } from "react-redux";
+import { addItemToFavorite } from "../../redux/favorite-reducer/favorite-reducer";
 
-const DetailedCard = ({book, addCartItem}) => {
+const DetailedCard = ({book, addCartItem, addFavoriteItem}) => {
     const {title, image, author, rating, price, pagesNumber, language} = book;
+    const [buttonAddCartStatus, setAddCartStatus] = useState(false);
+    const [buttonAddFavoriteStatus, setAddFavoritetStatus] = useState(false);
     return(
         <div className="detailed-card">
             <div className="image">
@@ -32,15 +35,19 @@ const DetailedCard = ({book, addCartItem}) => {
                 </div>
             </div>   
             <div className="buttons">
-                    <Button variant="contained" size="large" onClick={()=>{addCartItem(book)}}>
-                        add to cart
-                    </Button>
-                    <Button variant="contained" size="large">
+                    <div  className={`${buttonAddCartStatus ? 'button-clicked': ''}`} >
+                        <Button className={`add-to-cart ${buttonAddCartStatus ? 'button-clicked-style': ''}`} variant="contained" size="large" onClick={()=>{addCartItem(book); setAddCartStatus(true); setTimeout(()=> setAddCartStatus(false), 2000)}}>
+                            add to cart
+                        </Button>
+                    </div>
+                    <div className={`${buttonAddFavoriteStatus ? 'button-clicked': ''}`}>
+                    <Button className={`add-to-favorite ${buttonAddFavoriteStatus ? 'button-clicked-style': 'standard'}`} variant="contained" size="large" onClickCapture={()=>{addFavoriteItem(book); setAddFavoritetStatus(true); setTimeout(()=> setAddFavoritetStatus(false), 2000)}}>
                         add to favorite
                     </Button>
-                    <Button variant="contained" size="large">
+                    </div>
+                    {/* <Button variant="contained" size="large">
                         buy now
-                    </Button>
+                    </Button> */}
             </div>
         </div>
     )
@@ -48,7 +55,8 @@ const DetailedCard = ({book, addCartItem}) => {
 
 
 const mapDispatchToProps = dispatch => ({
-    addCartItem: (item) => dispatch(addItemToCart(item))
+    addCartItem: (item) => dispatch(addItemToCart(item)),
+    addFavoriteItem: (item) => dispatch(addItemToFavorite(item))
 })
 
 export default connect(null, mapDispatchToProps)(DetailedCard);
