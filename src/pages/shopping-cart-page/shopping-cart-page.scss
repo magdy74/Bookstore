@@ -5,11 +5,12 @@
     justify-content: center;
     width: 100%;
     min-height: 600px;
-    .container{
+    .container.with-items{
         @extend %container-width;
         display: flex;
         justify-content: center;
         @include media-query(max-width, 768px, (flex-direction: column, align-items:center));
+        @include media-query(min-width, 768px, (justify-content: space-between));
         .shopping-cart-container{
             display: flex;
             flex-direction: column;
@@ -30,26 +31,7 @@
                     margin: 20px 0;
                 }
             }
-            .shopping-cart-message{
-                h2{
-                    font-weight: normal; 
-                    margin: 20px 0px;
-                    margin-bottom: 30px;
-                }
-                .start-shopping-button{
-                    display: flex;
-                    justify-content: center;
             
-                    button{
-                        background-color: $base-color;
-                        width: 250px;
-                        margin-bottom: 40px;
-                        font-size: 18px;
-                        text-transform: capitalize;
-                        border-radius: 20px;
-                    }
-                }
-            }
             .total{
                 padding: 20px 0;
                 border-top: 1px solid black;
@@ -70,6 +52,48 @@
             border-radius: 25px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             @include media-query-minmax(min-width, 768px, max-width, 992px, (width:210px, padding: 0 10px, margin: 20px 0px 20px 10px));
+        }
+    }
+    .container.with-message{
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        width: 500px;
+        height: fit-content;
+        padding: 0 25px;
+        margin: 20px 10px;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        @include media-query(max-width, 768px, (width: 340px, padding: 0 10px));
+        @include media-query(min-width, 768px, (width: 700px));
+        @include media-query(min-width, 992px, (width: 950px));
+        @include media-query(min-width, 1200px, (width: 1150px));
+        .title{
+            h1{
+                font-weight: normal;
+                text-transform: capitalize;
+                margin: 20px 0;
+            }
+        }
+        .shopping-cart-message{
+            h2{
+                font-weight: normal; 
+                margin: 20px 0px;
+                margin-bottom: 30px;
+            }
+            .start-shopping-button{
+                display: flex;
+                justify-content: center;
+        
+                button{
+                    background-color: $base-color;
+                    width: 250px;
+                    margin-bottom: 40px;
+                    font-size: 18px;
+                    text-transform: capitalize;
+                    border-radius: 20px;
+                }
+            }
         }
     }
 }

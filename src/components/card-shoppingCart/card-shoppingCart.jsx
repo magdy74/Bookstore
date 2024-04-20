@@ -6,8 +6,9 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { connect } from "react-redux";
 import { decreaseQuantityItem, increaseQuantityItem, removeCartFromItem } from "../../redux/cart-reducer/cart-reducer";
+import { addItemToFavorite } from "../../redux/favorite-reducer/favorite-reducer";
 
-const CardShoppingCart = ({item, increaseQuantityItemAction, decreaseQuantityItemAction, removeCartFromItemAction}) =>{
+const CardShoppingCart = ({item, increaseQuantityItemAction, decreaseQuantityItemAction, removeCartFromItemAction, moveInFavoriteActione}) =>{
     const {id, image, title, price, quantity} = item;
     return(
         <div key= {id} className="item-card-shopping-cart">
@@ -27,9 +28,9 @@ const CardShoppingCart = ({item, increaseQuantityItemAction, decreaseQuantityIte
                         <div className="space">
                             <span>|</span>
                         </div>
-                        <div className="save-in-favorite">
+                        <div className="save-in-favorite" onClick={()=>{moveInFavoriteActione(item); removeCartFromItemAction(item)}}>
                             <FavoriteBorderIcon/>
-                            <span>save in favorite</span>
+                            <span>move in favorite</span>
                         </div>
                     </div>
                     <div className="quantity">
@@ -50,7 +51,8 @@ const CardShoppingCart = ({item, increaseQuantityItemAction, decreaseQuantityIte
 const mapDispatchToProps = dispatch => ({
     increaseQuantityItemAction: (item) => dispatch(increaseQuantityItem(item)),
     decreaseQuantityItemAction: (item) => dispatch(decreaseQuantityItem(item)),
-    removeCartFromItemAction: (item) => dispatch(removeCartFromItem(item))
+    removeCartFromItemAction: (item) => dispatch(removeCartFromItem(item)),
+    moveInFavoriteActione: (item) => dispatch(addItemToFavorite(item))
 })
 
 export default connect(null, mapDispatchToProps)(CardShoppingCart);

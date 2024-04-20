@@ -28,3 +28,30 @@ $second-color:#FEEBE8;
     @include media-query(min-width, 992px, (width: 970px));
     @include media-query(min-width, 1200px, (width: 1170px));
 }
+
+
+@keyframes showMessage {
+    0% {
+      opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        
+    }
+  }
+
+  %message-properties{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    background-color: black;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    width: max-content;
+    animation: showMessage 2s ease-in-out forwards;
+  }

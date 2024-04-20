@@ -29,6 +29,10 @@
         overflow-x:hidden;
         z-index: 9;
 
+        .favorite-logo{
+            padding-right: 5px;
+        }
+        
         &::after{
             content: '';
             position: absolute;

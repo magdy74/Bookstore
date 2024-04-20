@@ -5,6 +5,7 @@ import BookPage from './pages/book-page/book-page';
 import BooksPage from './pages/books-page/books.page';
 import ContactUs from './pages/contact-us-page/contact-us-page';
 import FaqPage from './pages/faq-page/faq-page';
+import FavoritePage from './pages/favorite-page/favorite-page';
 import HomePage from './pages/home-page/home.page';
 import ShoppingCartPage from './pages/shopping-cart-page/shopping-cart-page';
 import SignInPage from './pages/signin-page/signup.page';
@@ -25,6 +26,7 @@ function App() {
             <Route path=':id' element={<BookPage/>}/>
           </Route>
           <Route path='/cart' element={<ShoppingCartPage/>}/>
+          <Route path='/favorite' element={<FavoritePage/>}/>
           <Route path='/faq' element={<FaqPage/>}/>
           <Route path='/contactus' element={<ContactUs/>}/>
         </Routes>

@@ -10,7 +10,7 @@ const ShoppingCartPage = ({cartItems}) =>{
     const navigate = useNavigate();
     return(
     <div className="shopping-cart-page">
-        <div className="container">
+        <div className={`container ${cartItems[0] ? 'with-items': 'with-message'}`}>
             <div className="shopping-cart-container">
                 <div className="title">
                     <h1>shopping cart</h1>

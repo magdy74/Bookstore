@@ -6,10 +6,12 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import {addItemToCart} from '../../redux/cart-reducer/cart-reducer';
+import { addItemToFavorite } from "../../redux/favorite-reducer/favorite-reducer";
 
 const Card = (item) => {
-    const {image, title, author, rating, price, booksCard, addCartItem} = item;
-    const [buttonStatus, setStatus] = useState(false);
+    const {image, title, author, rating, price, booksCard, addCartItem, addFavoriteItem} = item;
+    const [buttonAddShoppingCartStatus, setAddShoppingCartStatus] = useState(false);
+    const [buttonAddFavoriteStatus, setAddFavoriteStatus] = useState(false);
     return(
         <div className={`card ${booksCard? 'books-card': null}`}>
             <div className="book-image">
@@ -31,13 +33,18 @@ const Card = (item) => {
                 <li className="price">{price + ' EGP'}</li>
             </ul>
             <ul className="book-functions">
-                <li className="add-favorite-logo">
-                    <FavoriteLogo/>
+                <li className={`add-favorite-logo ${buttonAddFavoriteStatus ? "button-clicked-favorite" :'standard'}`} >
+                    <div className={`button-add-favorite ${buttonAddFavoriteStatus ? "icon-button-clicked" :''}`} onClick={()=> {addFavoriteItem(item); setAddFavoriteStatus(true)}}>
+                        <FavoriteLogo />
+                        <div className="set-timeout-number">
+                            {buttonAddFavoriteStatus ? setTimeout(()=>setAddFavoriteStatus(false), 2000) : ''}
+                        </div>
+                    </div>
                 </li>
-                <li className={`add-cart-logo ${buttonStatus ? "button-clicked" :'standard'}`}>
-                    <AddShoppingCartIcon fontSize="large" className={`button-add-shopping-cart ${buttonStatus ? "icon-button-clicked" :''}`} onClick={()=> {addCartItem(item); setStatus(true)}}/>
+                <li className={`add-cart-logo ${buttonAddShoppingCartStatus ? "button-clicked-shopping-cart" :'standard'}`}>
+                    <AddShoppingCartIcon fontSize="large" className={`button-add-shopping-cart ${buttonAddShoppingCartStatus ? "icon-button-clicked" :''}`} onClick={()=> {addCartItem(item); setAddShoppingCartStatus(true)}}/>
                     <div className="set-timeout-number">
-                        {buttonStatus ? setTimeout(()=>setStatus(false), 2000) : ''}
+                        {buttonAddShoppingCartStatus ? setTimeout(()=>setAddShoppingCartStatus(false), 2000) : ''}
                     </div>
                 </li>
             </ul>
@@ -47,7 +54,8 @@ const Card = (item) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-    addCartItem: (item) => dispatch(addItemToCart(item))
+    addCartItem: (item) => dispatch(addItemToCart(item)),
+    addFavoriteItem: (item) => dispatch(addItemToFavorite(item))
 })
 
 export default connect(null, mapDispatchToProps)(Card);

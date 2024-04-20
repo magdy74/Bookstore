@@ -13,7 +13,9 @@ const HeaderDropDown = ({SetMenuBar}) => (
             </Link>
             <Link className="link" to={"/favorite"}>
                 <span>favorite</span>
-                <FavoriteLogo/>
+                <div className="favorite-logo">
+                    <FavoriteLogo/>
+                </div>
             </Link>
             <Link className="link" to={'/'}>home</Link>
             <Link className="link" to={"/books"}>books</Link>

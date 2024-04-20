@@ -74,17 +74,34 @@
             align-items: center;
             
             .add-favorite-logo{
-                margin: 5px 10px 5px 10px;
+                margin: 5px 22px 5px 22px;
                 padding: 0;
                 .favorite-logo{
                 svg{
                     width: 35px;
                     margin: 0;
                 }
-                &:hover path{
+                }
+                &.standard:hover path {
                     fill-rule:nonzero;
                     fill:$base-color;
-                }}
+                    cursor:pointer;
+                }
+                &.button-clicked-favorite::after{
+                    content: 'Added to Favorite';
+                    @extend  %message-properties;
+    
+                }
+                .button-add-favorite.icon-button-clicked{
+                    path{
+                        fill-rule:nonzero;
+                        fill:#797979;
+                    }
+                    cursor:auto;
+                          }
+                .set-timeout-number{
+                    display:none;
+                }
             }
         }
         .add-cart-logo{
@@ -95,17 +112,9 @@
                 color: $base-color;
                 cursor: pointer;
             }
-            &.button-clicked::after{
+            &.button-clicked-shopping-cart::after{
                 content: 'Added to shopping cart';
-                position: absolute;
-                left: 70px;
-                background-color: black;
-                padding: 15px;
-                border-radius: 15px;
-                color: white;
-                width: 180px;
-                height: 20px;
-                animation: showMessage 2s ease-in-out forwards;
+                @extend  %message-properties;
 
             }
             .icon-button-clicked{
@@ -136,26 +145,15 @@
             display: flex;
             justify-content: center;
         }
+        .add-favorite-logo {
+            &.button-clicked-favorite::after{
+                @include media-query(max-width, 768px, (transform: scale(75%)));           
+            }
+        }
         .add-cart-logo{
-            &.button-clicked::after{
-                content: 'Added to shopping cart';
-                position: absolute;
-                left: 20px;
-                top: 50%;
-                @include media-query(max-width, 768px, (transform: scale(75%), left:-5px));
+            &.button-clicked-shopping-cart::after{
+                @include media-query(max-width, 768px, (transform: scale(75%)));
             }
         }
     }
 }
-
-@keyframes showMessage {
-    0% {
-      opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-  }

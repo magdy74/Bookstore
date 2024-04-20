@@ -1,14 +1,15 @@
 @import '../../sass_common_style/common_style.scss';
 
-.item-card-shopping-cart{
+.item-card-favorite{
     display: flex;
     justify-content: space-between;
     border-top: 1px solid black;
     padding: 20px 0;
     width: 500px;
     @include media-query(max-width, 768px, (width: 340px));
-    @include media-query-minmax(min-width, 768px, max-width, 992px, ( width: 480px));
-    @include media-query(min-width, 1200px, (width: 650px));
+    @include media-query(min-width, 768px, (width: 700px));
+    @include media-query(min-width, 992px, (width: 950px));
+    @include media-query(min-width, 1200px, (width: 1150px));
     .image{
         img{
             width: 100px;
@@ -17,8 +18,10 @@
     }
     .details-and-price{
         display: flex;
-        width: 400px;
-        @include media-query(max-width, 768px, (width: 300px, flex-direction:column));
+        justify-content: space-between;
+        width: max-content;
+        flex-grow: 1;
+        @include media-query(max-width, 768px, (width: 260px, flex-direction:column));
         @include media-query(min-width, 1200px, (width: 550px));
         .details{
             margin-left: 25px;
@@ -26,21 +29,20 @@
             flex-direction: column;
             justify-content: space-between;
             height:max-content;
-            width: 350px;
+            // flex-grow: 1;
             @include media-query(max-width, 768px, (width: 260px));
-            @include media-query-minmax(min-width, 768px, max-width, 992px, ( width: 330px));
-            @include media-query(min-width, 1200px, (width: 400px));
+            @include media-query(min-width, 768px, (flex-grow: 1));
             h2{
                 margin: 0 5px;
                 font-weight: normal;
                 @include media-query(max-width, 768px, (font-size: 18px, width: 240px));
             }
-            .remove-and-save-in-favorite{
+            .remove-and-add-to-cart{
                 display: flex;
                 align-items: center;
                 margin: 10px 0 0 0;
                 @include media-query(max-width, 768px, (font-size: 18px, width: 240px));
-                .remove-item, .save-in-favorite{
+                .remove-item, .add-to-cart{
                     display: flex;
                     align-items: center;
                     color:$base-color;
@@ -60,23 +62,6 @@
                     margin: 0px 5px;
                     font-size: 16px;
                     color: rgb(128, 118, 118);
-                }
-            }
-            .quantity{
-                display: flex;
-                align-items: center;
-                margin: 10px 5px 10px 3px;
-                span{
-                    margin: 0 5px;
-                    font-size: 20px;
-                }
-                svg{
-                    color:$base-color;
-                    
-                }
-                svg:hover{
-                    cursor: pointer;
-                    opacity: 80%;
                 }
             }
         }
