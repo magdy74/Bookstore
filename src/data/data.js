@@ -121,6 +121,64 @@ const Books = [
 		pagesNumber:252,
 		language: 'english',
 		summary: `"The Psychology of Money" by Morgan Housel delves into the behavioral aspects of personal finance and investing. Housel explores the psychological factors that influence how people manage money, including emotions, biases, and societal norms. Through engaging anecdotes and insights, he highlights the importance of understanding one's relationship with money and making decisions that align with long-term financial goals. The book offers valuable lessons on topics such as risk-taking, patience, and the true meaning of wealth, providing readers with a deeper understanding of how to navigate the complex world of finance and achieve financial success.`
+	},
+	{
+		id:10,
+		title:'الاب الغنى واالاب الفقيير',
+		author:'روبرت كيوساكي',
+		image:'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1704115515i/204612835.jpg',
+		rating:3.91,
+		price:125,
+		isbn:'',
+		isbn13:'',
+		pagesNumber:236,
+		language: 'arabic',
+		summary: `يتناول كتاب "الأب الغني والأب الفقير" لروبرت كيوساكي قصة حياة الكاتب نفسه وتجاربه الشخصية مع والده البائس المادياً ووالده الغني الروحياً. يعرض الكتاب فلسفة النجاح المالي التي علمها له الأب الغني، والتي تشمل الاستثمار في العقارات والأصول وبناء الأعمال الخاصة. يقدم الكتاب العديد من الدروس والمفاهيم حول كيفية التفكير بشكل مختلف في الأمور المالية، وتحويل الفشل إلى فرصة للتعلم والنمو. تعتبر هذه الرواية مصدر إلهام للكثيرين في رحلتهم نحو الاستقلال المالي والنجاح الشخصي.`
+
+	},
+	{
+		id:11,
+		title:'كيف تكسب الأصدقاء وتؤثر في الناس',
+		author:'ديل كارنيجي',
+		image:'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1303248434i/11159979.jpg',
+		rating:4.22,
+		price:125,
+		isbn:'',
+		isbn13:'',
+		pagesNumber:189,
+		language: 'arabic',
+		summary: `كتاب "كيف تكسب الأصدقاء وتؤثر في الناس" للكاتب ديل كارنيجي يقدم مجموعة من النصائح العملية لتحسين العلاقات الإنسانية وزيادة التأثير الشخصي. يركز الكتاب على مبادئ أساسية لجذب الآخرين وتحقيق تأثير إيجابي عليهم، مثل إظهار الاهتمام الحقيقي بالآخرين، والاستماع بانفتاح، وتقديم التقدير الصادق. يبرز الكتاب أيضًا أهمية التعاطف وفهم وجهات نظر الآخرين، وتجنب الانتقاد والإدانة. من خلال القصص والأمثلة، يوضح كارنيجي كيف يمكن تطبيق هذه المبادئ في مختلف الحالات لتعزيز التواصل، وبناء الثقة، وبالتالي تحقيق النجاح في الحياة الشخصية والمهنية.`
+
+	},
+	{
+		id:12,
+		title:'ارض زيكولا الجزء الاول',
+		author:'عمرو عبدالحميد',
+		image:'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1641622989i/60060106.jpg',
+		rating:3.90,
+		price:100,
+		isbn:'',
+		isbn13:'',
+		pagesNumber:288,
+		language: 'arabic',
+		summary: `هل جرّبت أن تتعامل بعملة مختلفة عن العملات الورقية .. ليست معدنية وليست ذهبية ...الثروة هنا من نوع آخر ... لن تدفع مالاً لتأخذ ..بل ستدفع من ذكائك ..ستدفع من وحدات عقلك... ولكن انتبه فـ للثروة حدود ...فهنا المفلس لا يعامل باحتقار أو يُهان كما يحدث في عالمك .. بل يتعرض للموت .. احذر .. فأنت .. في أرض زيكولا`
+
+	},
+	{
+		id:13,
+		title:'ارض زيكولا الجزء الثاني',
+		author:'عمرو عبدالحميد',
+		image:'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1699418481i/200781690.jpg',
+		rating:3.90,
+		price:125,
+		isbn:'',
+		isbn13:'',
+		pagesNumber:275,
+		language: 'arabic',
+		summary: `
+		يتقدم خالد لخطبة حبيبته للمرة التاسعة فيوافق أبيها هذا المرة بعد رفضه للمرات الثمانية السابقة. يبدأ الكاتب روايته بإخبارنا بنجاح خالد فى الخروج من أرض زيكولا بمساعدة أسيل والتى اعلن حاكم زيكولا خيانتها بسبب مساعدتها لخالد والتى انتقلت لبلدتها بيجانا ولكن حاكم بيجانا موال لزيكولا فأسرت اسيل فى اكبر سجن فى بيجانا
+والتى عليها سداد 1000 فقير كل عام لاماريتا التى التى تدينها فقررت ان تذهب من الالف فقير الذى سيذهب لاماريتا وحدثهم الملك انهم اصبحوا من اهل اماريتا ويخضعون لقوانينها ولكل اسير رقم مطابق لاحد بيوت المدينة وهو الذى يقوم بضيافته لمدة ستة اشهر`
+
 	}
 
 ]

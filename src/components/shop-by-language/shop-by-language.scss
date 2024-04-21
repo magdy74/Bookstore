@@ -31,6 +31,13 @@
                 justify-content: center;
                 align-items: center;
                 cursor: pointer;
+                span{
+                    display: none;
+                }
+                h2{
+                    color: black;
+                    text-transform: capitalize;
+                }
 
                 &:hover{
                     background-color: #ececec;

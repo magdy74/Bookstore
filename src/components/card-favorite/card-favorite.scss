@@ -14,6 +14,9 @@
         img{
             width: 100px;
             @include media-query(max-width, 768px, (width: 80px));
+            &:hover{
+                opacity: 80%;
+            }
         }
     }
     .details-and-price{
@@ -32,10 +35,19 @@
             // flex-grow: 1;
             @include media-query(max-width, 768px, (width: 260px));
             @include media-query(min-width, 768px, (flex-grow: 1));
-            h2{
-                margin: 0 5px;
-                font-weight: normal;
-                @include media-query(max-width, 768px, (font-size: 18px, width: 240px));
+            .title{
+                a{
+                    text-decoration: none;
+                    color: black;
+                    h2{
+                        margin: 0 5px;
+                        font-weight: normal;
+                        @include media-query(max-width, 768px, (font-size: 18px, width: 240px));
+                    }
+                    &:hover{
+                        opacity: 80%;
+                    }
+                }
             }
             .remove-and-add-to-cart{
                 display: flex;

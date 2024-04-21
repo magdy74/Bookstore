@@ -7,18 +7,23 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { connect } from "react-redux";
 import { decreaseQuantityItem, increaseQuantityItem, removeCartFromItem } from "../../redux/cart-reducer/cart-reducer";
 import { addItemToFavorite } from "../../redux/favorite-reducer/favorite-reducer";
+import { Link } from "react-router-dom";
 
 const CardShoppingCart = ({item, increaseQuantityItemAction, decreaseQuantityItemAction, removeCartFromItemAction, moveInFavoriteActione}) =>{
     const {id, image, title, price, quantity} = item;
     return(
         <div key= {id} className="item-card-shopping-cart">
                 <div className="image">
-                    <img src={image} alt="img" />
+                    <Link to={`/books/${title}`}>
+                        <img src={image} alt="img" />   
+                    </Link>                             
                 </div>
                 <div className="details-and-price">
                 <div className="details">
                     <div className="title">
-                        <h2>{title}</h2>
+                        <Link to={`/books/${title}`}>
+                            <h2>{title}</h2>
+                        </Link>    
                     </div>
                     <div className="remove-and-save-in-favorite">
                         <div className="remove-item" onClick={()=>{removeCartFromItemAction(item)}}>

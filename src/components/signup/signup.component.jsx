@@ -3,7 +3,6 @@ import './signup.style.scss';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import {Link as Linkoo} from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -96,10 +95,8 @@ const SignUp = () => {
                 </Button>
                 <Grid container justifyContent="flex-end">
                 <Grid item>
-                    <Link to={"/signin"} >
-                           <Linkoo variant="body2">
+                    <Link to={"/signin"} className='link-mui-style'>
                            Already have an account? Sign in
-                            </Linkoo> 
                     </Link>
                 </Grid>
                 </Grid>

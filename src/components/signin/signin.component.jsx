@@ -5,7 +5,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import {Link as LinkMui} from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -66,6 +65,7 @@ export default function SignIn() {
                 autoComplete="current-password"
                 />
                 <FormControlLabel
+                name='FormControlLabel' 
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
                 />
@@ -79,15 +79,13 @@ export default function SignIn() {
                 </Button>
                 <Grid container>
                 <Grid item xs>
-                    <LinkMui href="#" variant="body2">
+                  {/* <Link to={'/signup'} className='link-mui-style'>
                     Forgot password?
-                    </LinkMui>
+                  </Link> */}
                 </Grid>
                 <Grid item>
-                <Link to={'/signup'}>
-                    <LinkMui href="#" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                    </LinkMui>
+                <Link to={'/signup'} className='link-mui-style'>
+                    Don't have an account? Sign Up
                 </Link>
                 </Grid>
                 </Grid>

@@ -15,7 +15,9 @@ const Card = (item) => {
     return(
         <div className={`card ${booksCard? 'books-card': null}`}>
             <div className="book-image">
-                <img src={image} alt="book" />
+                <Link to={`/books/${title}`}>
+                    <img src={image} alt="book"/>
+                </Link>      
             </div>
             <div className={`card-details-functions ${booksCard? 'books-card-details-functions': null}`}>
             <ul className="book-details">

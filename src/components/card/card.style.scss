@@ -14,10 +14,17 @@
         display: flex;
         align-items: center;
         margin-left: 25px;
-        img{
-            height: 150px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        a{
+            height: inherit;
+            img{
+                height: 150px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                cursor: pointer;
+                &:hover{
+                    opacity: 80%;
+                }
+            }
         }
         
     }
@@ -54,6 +61,9 @@
                 a{
                     text-decoration: none;
                     color: black;
+                    &:hover{
+                        opacity: 80%;
+                    }
                 }
             }
             .author{
@@ -138,6 +148,7 @@
             @include media-query(max-width, 768px, (height: 250px));
             img{
                 height: 100%;
+                cursor: pointer;
             }   
 
         }

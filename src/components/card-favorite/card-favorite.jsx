@@ -5,18 +5,23 @@ import { connect } from "react-redux";
 import { removeItemFromFavorite } from "../../redux/favorite-reducer/favorite-reducer";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { addItemToCart } from "../../redux/cart-reducer/cart-reducer";
+import { Link } from "react-router-dom";
 
 const CardFavorite = ({item, removeItemFromfavoriteAction, moveToShoppingCartAction}) =>{
     const {id, image, title, price} = item;
     return(
         <div key= {id} className="item-card-favorite">
                 <div className="image">
-                    <img src={image} alt="img" />
+                    <Link to={`/books/${title}`}>
+                        <img src={image} alt="img" />
+                    </Link>    
                 </div>
                 <div className="details-and-price">
                 <div className="details">
                     <div className="title">
-                        <h2>{title}</h2>
+                        <Link to={`/books/${title}`}>
+                            <h2>{title}</h2>
+                        </Link>    
                     </div>
                     <div className="remove-and-add-to-cart">
                         <div className="remove-item" onClick={()=>{removeItemFromfavoriteAction(item)}}>
